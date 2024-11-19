@@ -32,10 +32,10 @@ export const updateFlow = async (req, res) => {
 
         await flow.save();
 
-        res.status(200).json(newFlow);
+        res.status(200).json(flow);
     } catch (err) {
         res.status(500).json({
-            message: "Encountered the following error while initializing flow.",
+            message: "Encountered the following error while updating flow.",
             error: err.message,
         });
     }
